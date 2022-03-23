@@ -55,9 +55,9 @@ function mapMaker(stationLocations) {
 
   // Create the map object with options.
   var myMap = L.map("map", {
-    center: [45.52, -122.67],
-    zoom: 3,
-    layer: [baseMaps, overlayMaps],
+    center: [44.52, -103.67],
+    zoom: 4,
+    //  layer: [baseMaps, overlayMaps],
   });
 
   // Create a layer control, and pass it baseMaps and overlayMaps. Add the layer control to the map.
@@ -66,6 +66,8 @@ function mapMaker(stationLocations) {
       collapsed: false,
     })
     .addTo(myMap);
+  tile.addTo(myMap);
+  stationLocations.addTo(myMap);
 }
 
 // ============== graph ===================================================
@@ -115,7 +117,7 @@ anychart.onDocumentReady(async function () {
 
   // set the titles of the axes
   chart.xAxis().title("States");
-  chart.yAxis().title("Changes: Percentage (%) and Abosolute ");
+  chart.yAxis().title("Changes: Percentage (%) and Absolute ");
 
   // set the container id
   chart.container("graph-container");
