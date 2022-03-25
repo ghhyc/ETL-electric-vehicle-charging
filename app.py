@@ -10,6 +10,8 @@ from flask import Flask, render_template, request, redirect, jsonify
 import json
 import config
 
+password = "admin"
+
 ##################################################
 # Database Setup
 ##################################################
